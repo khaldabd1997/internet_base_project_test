@@ -10,7 +10,7 @@ if($requestMethod == 'GET' and isset($_GET['id'])){
 
 function get_user($i){
     $conn = mysqli_connect($GLOBALS['host'],$GLOBALS['username'],$GLOBALS['password'],$GLOBALS['db']) or die("Error " . mysqli_error($conn));
-    $sqlstr1 = "SELECT * FROM messages WHERE `receiver_id` = '$i'";
+    $sqlstr1 = "SELECT * FROM messages WHERE `receiver_id` = '$i' ORDER BY date,time";
     $sqldata1 = mysqli_query($conn, $sqlstr1) or die("Error in Selecting " . mysqli_error($conn));
     $emparray1 = array();
     $emparray2 = array();
@@ -20,7 +20,7 @@ function get_user($i){
         $emparray1[] = $row;
     }
 
-    $myjson = isset($i) ? json_encode($emparray1) : json_encode($emparray1);
+    $myjson = json_encode($emparray1);
 
     header('Access-Control-Allow-Origin: *');
     header('Content-type: application/json');

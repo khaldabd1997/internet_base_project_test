@@ -43,6 +43,10 @@ Route::get('employee-activities', function(){
     return view('employee/employee_activities');
 });
 
+Route::get('employee-password', function(){
+    return view('employee/employee_password');
+});
+
 
 
 
@@ -61,4 +65,14 @@ Route::get('student-messages', function(){
 
 Route::get('student-activities', function(){
     return view('student/student_activities');
+});
+
+Route::get('student-password', function(){
+    return view('student/student_password');
+});
+
+
+
+Route::get('admin', function(){
+    return view('login\admin');
 });

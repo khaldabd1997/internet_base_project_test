@@ -13,6 +13,7 @@ if($_SESSION['loggedin']){
     $GLOBALS['username'] = "root";
     $GLOBALS['password'] = "asdrasdr1";
     $GLOBALS['db'] = "management";
+    $GLOBALS['table'] = "employees";
     
     header('Content-type: application/json');
     header('Access-Control-Allow-Origin: *');

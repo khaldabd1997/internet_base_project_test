@@ -19,10 +19,10 @@ function edt_user(){
     $surname = isset($mydataa['surname']) ? $mydataa['surname'] : '';
     $mobile = isset($mydataa['mobile']) ? $mydataa['mobile'] : '';
     $email = isset($mydataa['email']) ? $mydataa['email'] : '';
-    $position = isset($mydataa['position']) ? $mydataa['position'] : '';
+    $department = isset($mydataa['department']) ? $mydataa['department'] : '';
     $image = isset($mydataa['image']) ? $mydataa['image'] : '';
 
-    $valid = validate($tc, $name, $surname, $position, $mobile, $image, $email);
+    $valid = validate($tc, $name, $surname, $department, $mobile, $image, $email);
 
     if($valid == ''){
         
@@ -32,7 +32,7 @@ function edt_user(){
         $conn = mysqli_connect($GLOBALS['host'],$GLOBALS['username'],$GLOBALS['password'],$GLOBALS['db']) or die("Error " . mysqli_error($conn));
         
         $sqlstr1 = "UPDATE " . $GLOBALS['table'] . " SET
-        `tc`='$tc', `name`='$name', `surname`='$surname', `mobile`='$mobile', `email`='$email', `position`='$position'
+        `tc`='$tc', `name`='$name', `surname`='$surname', `mobile`='$mobile', `email`='$email', `department`='$department'
         WHERE `id`='$id'";
 
         $sqlstr2 = "UPDATE `employees` SET

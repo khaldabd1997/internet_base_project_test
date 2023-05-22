@@ -17,22 +17,23 @@ function set_user(){
 
     //$id = isset($mydataa['id']) ? $mydataa['id'] : '';
     $id = uniqid();
-    $sender_id = isset($mydataa['sender_id']) ? $mydataa['sender_id'] : '';
+    $sender_id = $_SESSION['id'];//isset($mydataa['sender_id']) ? $mydataa['sender_id'] : '';
     $receiver_id = isset($mydataa['receiver_id']) ? $mydataa['receiver_id'] : '';
     $date = isset($mydataa['date']) ? $mydataa['date'] : '';
     $time = isset($mydataa['time']) ? $mydataa['time'] : '';
     $message = isset($mydataa['message']) ? $mydataa['message'] : '';
-    $is_read = isset($mydataa['is_read']) ? $mydataa['is_read'] : '';
-    $sender_name = isset($mydataa['sender_name']) ? $mydataa['sender_name'] : '';
+    $is_read = 0;//isset($mydataa['is_read']) ? $mydataa['is_read'] : '';
+    $sender_name = $_SESSION['name'] . " " . $_SESSION['surname'];//isset($mydataa['sender_name']) ? $mydataa['sender_name'] : '';
     $receiver_name = isset($mydataa['receiver_name']) ? $mydataa['receiver_name'] : '';
+    $subject = isset($mydataa['subject']) ? $mydataa['subject'] : '';
 
     $valid = '';//validate($sender_id, $receiver_id, $date, $sender_name, $time, $receiver_name, $message);
 
     if($valid == ''){
 
         $conn = mysqli_connect($GLOBALS['host'],$GLOBALS['username'],$GLOBALS['password'],$GLOBALS['db']) or die("Error " . mysqli_error($conn));
-        $sqlstr = "INSERT INTO `messages` (`id`, `sender_id`, `receiver_id`, `date`, `time`, `message`, `is_read`, `sender_name`, `receiver_name`) 
-        VALUES ('$id', '$sender_id', '$receiver_id', '$date', '$time', '$message', '$is_read', '$sender_name', '$receiver_name');";
+        $sqlstr = "INSERT INTO `messages` (`id`, `sender_id`, `receiver_id`, `date`, `time`, `message`, `is_read`, `sender_name`, `receiver_name`, `subject`) 
+        VALUES ('$id', '$sender_id', '$receiver_id', '$date', '$time', '$message', '$is_read', '$sender_name', '$receiver_name', '$subject');";
         
         $conn->query($sqlstr);
 

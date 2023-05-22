@@ -22,20 +22,20 @@ function set_user(){
     $surname = isset($mydataa['surname']) ? $mydataa['surname'] : '';
     $mobile = isset($mydataa['mobile']) ? $mydataa['mobile'] : '';
     $email = isset($mydataa['email']) ? $mydataa['email'] : '';
-    $password = isset($mydataa['password']) ? $mydataa['password'] : '';
-    $position = isset($mydataa['position']) ? $mydataa['position'] : '';
+    $department = isset($mydataa['department']) ? $mydataa['department'] : '';
     $image = isset($mydataa['image']) ? $mydataa['image'] : '';
 
-    $valid = validate($tc, $name, $surname, $position, $mobile, $image, $email);
+    $valid = validate($tc, $name, $surname, $department, $mobile, $image, $email);
 
     if($valid == ''){
         
         $name = ucwords($name);
         $surname = ucwords($surname);
+        $password = substr($tc, 0, 5) . 'K';
 
         $conn = mysqli_connect($GLOBALS['host'],$GLOBALS['username'],$GLOBALS['password'],$GLOBALS['db']) or die("Error " . mysqli_error($conn));
-        $sqlstr = "INSERT INTO " . $GLOBALS['table'] . " (`id`, `tc`, `name`, `surname`, `mobile`, `email`, `password`, `position`, `image`) 
-        VALUES ('$id', '$tc', '$name', '$surname', '$mobile', '$email', '$password', '$position', '$image');";
+        $sqlstr = "INSERT INTO " . $GLOBALS['table'] . " (`id`, `tc`, `name`, `surname`, `mobile`, `email`, `password`, `department`, `image`) 
+        VALUES ('$id', '$tc', '$name', '$surname', '$mobile', '$email', '$password', '$department', '$image');";
         
         $conn->query($sqlstr);
 

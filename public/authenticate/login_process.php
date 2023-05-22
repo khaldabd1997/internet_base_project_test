@@ -47,11 +47,7 @@ function employee(){
         $_SESSION['email'] = $emparray[0]['email'];
         $_SESSION['position'] = $emparray[0]['position'];
         $_SESSION['image'] = $emparray[0]['image'];
-
-        $msg = "First line of text\nSecond line of text";
-        $msg = wordwrap($msg,70);
-        $headers = "From: osama.3nbri13@gmail.com";
-        mail("osama.3nbri13@gmail.com","My subject",$msg,$headers);
+        $_SESSION['password'] = $emparray[0]['password'];
 
         header("location:../employee-main");
     }else
@@ -83,8 +79,9 @@ function student(){
         $_SESSION['surname'] = $emparray[0]['surname'];
         $_SESSION['mobile'] = $emparray[0]['mobile'];
         $_SESSION['email'] = $emparray[0]['email'];
-        $_SESSION['position'] = $emparray[0]['position'];
+        $_SESSION['depatment'] = $emparray[0]['depatment'];
         $_SESSION['image'] = $emparray[0]['image'];
+        $_SESSION['password'] = $emparray[0]['password'];
 
         header("location:../student-main");
     }else
@@ -93,4 +90,5 @@ function student(){
 
 function back(){
     header("location:../login");
+    exit;
 }
