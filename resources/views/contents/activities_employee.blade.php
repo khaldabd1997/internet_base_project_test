@@ -608,6 +608,48 @@
         justify-self: end;
         padding-right: 5%;
     }
+    @media only screen and (max-width: 600px) {
+        .user-row-texts {
+        width: 70%;
+        height: 50px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        text-align: left;
+        padding-left: 3%;
+        }
+
+        .actv-name {
+        width: 30%;
+        }
+
+        .actv-date {
+            width: 30%;
+        }
+
+        .actv-time {
+            width: 30%;
+        }
+
+        .actv-dur {
+            visibility: hidden;
+            width: 0%;
+        }
+
+        .actv-lec {
+            visibility: hidden;
+            width: 0%;
+        }
+        .user-row-buttons {
+        width: 30%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: end;
+        justify-self: end;
+        padding-right: 5%;
+        }
+    }
 
     .main-top-button {
         display: flex;

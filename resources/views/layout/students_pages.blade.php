@@ -138,6 +138,15 @@
         border-color: darkgray;
     }
 
+    @media only screen and (max-width: 600px) {
+        .navbar-center {
+            width: 50%;
+        }
+        .navbar-right {
+            width: 50%;
+        }
+    }
+
     .navbar-right img {
         margin-right: 7%;
         margin-left: 7%;

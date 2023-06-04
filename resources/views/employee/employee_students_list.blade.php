@@ -20,4 +20,3 @@ if(!isset($_SESSION['loggedin']) or $_SESSION['type'] != 1){
 @endsection
 
 <?php } ?>
-

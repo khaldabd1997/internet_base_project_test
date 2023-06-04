@@ -15,4 +15,5 @@ if(!isset($_SESSION['loggedin']) or $_SESSION['type'] != 1){
 @section('home_icon' , 'storage/images/icons/home-icon-active.svg')
 @section('page_name', 'Main Page')
 
+
 <?php } ?>

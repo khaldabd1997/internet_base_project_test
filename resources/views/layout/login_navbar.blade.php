@@ -8,8 +8,8 @@
             <div><b><a>Login</a></b></div>
             <div><a>Donate</a></div>
             <div><a>Our Projects</a></div>
-            <div><a>About Us</a></div>
             <div><a>Search</a></div>
+            <div><a>About Us</a></div>
         </div>
         <div class="navbar-main-right">
             <button class="btn btn-ylo">Admin Login</button>
@@ -18,7 +18,7 @@
 </nav>
 
 <style>
-    /*-------------------------------------navbar-------------------------------*/
+/*-------------------------------------navbar-------------------------------*/
 
     .nav-link:active {
         font-weight: bold;

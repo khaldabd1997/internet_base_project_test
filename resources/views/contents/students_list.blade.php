@@ -694,6 +694,59 @@
         padding-right: 5%;
     }
 
+    @media only screen and (max-width: 600px) {
+        .user-row-texts {
+        width: 70%;
+        height: 50px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        text-align: left;
+        padding-left: 3%;
+        }
+
+        .user-photo {
+            width: 30%;
+        }
+
+        .user-tc {
+            width: 0%;
+            visibility: hidden;
+        }
+
+        .user-name {
+            width: 30%;
+        }
+
+        .user-surname {
+            width: 30%;
+        }
+
+        .user-position {
+            width: 0%;
+            visibility: hidden;
+        }
+
+        .user-number {
+            width: 0%;
+            visibility: hidden;
+        }
+
+        .user-email {
+            width: 0%;
+            visibility: hidden;
+        }
+        .user-row-buttons {
+        width: 30%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: end;
+        justify-self: end;
+        padding-right: 5%;
+        }
+    }
+
     .main-top-button {
         display: flex;
         flex-flow: row;

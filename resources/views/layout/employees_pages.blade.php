@@ -26,33 +26,36 @@
                         <b>Services</b>
                     </div>
                     <div>
-                        <button onclick="window.location.href='employee-main'" id="@yield('main_active', '')">
-                            <div><img alt="Image not found" src="@yield('home_icon', 'storage/images/icons/home-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Home Page</div>
-                        </button>
-                        <button onclick="window.location.href='employee-students-list'" id="@yield('users_active', '')">
-                            <div><img alt="Image not found" src="@yield('user_icon', 'storage/images/icons/users-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Students List</div>
-                        </button>
-                        <button onclick="window.location.href='employee-info'" id="@yield('info_active', '')">
-                            <div><img alt="Image not found" src="@yield('statistic_icon', 'storage/images/icons/statistic-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Personal Infos</div>
-                        </button>
-                        <button onclick="window.location.href='employee-activities'" id="@yield('activities_active', '')">
-                            <div><img alt="Image not found" src="@yield('activities_icon', 'storage/images/icons/activities-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Activities</div>
-                        </button>
-                        <button onclick="window.location.href='employee-messages'" id="@yield('messages_active', '')">
-                            <div><img alt="Image not found" src="@yield('mail_icon', 'storage/images/icons/mail-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Messages</div>
-                        </button>
-                        <button onclick="window.location.href='employee-password'" id="@yield('password_active', '')">
-                            <div><img alt="Image not found" src="@yield('password_icon', 'storage/images/icons/password-icon.svg')"></div>
-                            <div style="margin-left: 10px;">Change Password</div>
-                        </button>
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <button onclick="window.location.href='employee-main'" id="@yield('main_active', '')">
+                                <div><img alt="Image not found" src="@yield('home_icon', 'storage/images/icons/home-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Home Page</div>
+                            </button>
+                            <button onclick="window.location.href='employee-students-list'" id="@yield('users_active', '')">
+                                <div><img alt="Image not found" src="@yield('user_icon', 'storage/images/icons/users-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Students List</div>
+                            </button>
+                            <button onclick="window.location.href='employee-info'" id="@yield('info_active', '')">
+                                <div><img alt="Image not found" src="@yield('statistic_icon', 'storage/images/icons/statistic-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Personal Infos</div>
+                            </button>
+                            <button onclick="window.location.href='employee-activities'" id="@yield('activities_active', '')">
+                                <div><img alt="Image not found" src="@yield('activities_icon', 'storage/images/icons/activities-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Activities</div>
+                            </button>
+                            <button onclick="window.location.href='employee-messages'" id="@yield('messages_active', '')">
+                                <div><img alt="Image not found" src="@yield('mail_icon', 'storage/images/icons/mail-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Messages</div>
+                            </button>
+                            <button onclick="window.location.href='employee-password'" id="@yield('password_active', '')">
+                                <div><img alt="Image not found" src="@yield('password_icon', 'storage/images/icons/password-icon.svg')"></div>
+                                <div style="margin-left: 10px;">Change Password</div>
+                            </button>
+                        </ul>
                     </div>
                 </div>
             </div>
+            
             <div class="col-sm-10 main" style="padding: 0px">
                 <nav class="navbar-pages">
                     <div class="navbar-div">
@@ -90,7 +93,7 @@
         flex-flow: row;
         align-items: center;
         border-bottom-width: 0.5px;
-        border-top-width: 0px;
+        border-top-width: 0.5px;
         border-right-width: 0px;
         border-left-width: 0px;
         border-style: solid;
@@ -140,6 +143,15 @@
         border-width: 00px;
         border-left-width: 0.5px;
         border-color: darkgray;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .navbar-center {
+            width: 50%;
+        }
+        .navbar-right {
+            width: 50%;
+        }
     }
 
     .navbar-right img {
