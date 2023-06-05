@@ -1,8 +1,8 @@
 This project is implemented by :
 
 <b>Khalid Abdulrauf</b>
-<b>Ghaith Almadani</b>
-<b>Mhd Osama Anbari</b>
+<br><b>Ghaith Almadani</b>
+<br><b>Mhd Osama Anbari</b>
 
 As an Internet based programming subject project
 
